@@ -1,0 +1,52 @@
+body {
+  background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
+  background-size:100% auto;
+  background-repeat: no-repeat;
+}
+
+
+
+
+#balloon {
+  position: fixed;
+  margin: 10% 38%;
+  opacity: 1;
+}
+
+
+
+.icon-journal {
+  margin: 25px;
+  font-size: 45px;
+  color:white;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0;
+  position:fixed;
+}
+
+
+
+
+  .fadein {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -ms-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease;
+  }
+
+  .fadein:hover {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+
+  @media (max-width: 900px) {
+    .fadein {
+      opacity: 1;
+    }
+}
