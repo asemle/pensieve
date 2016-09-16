@@ -3,22 +3,36 @@ angular.module('pensieve',["ui.router"])
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-  .state("inbox", {
+  .state('home', {
     url: "/",
-    templateUrl: "./src/templates/inbox.html",
-    controller: "inboxCtrl"
+    templateUrl: "./templates/home.html",
+    controller: "penCtrl"
 
   })
-  .state('draft', {
-    url: "/draft/:email",
-    templateUrl: "./src/templates/draft.html",
-    controller: "draftCtrl"
+
+  .state("archive", {
+    url: "/archive",
+    templateUrl: "./templates/archive.html",
+    controller: "archiveCtrl"
 
   })
-  .state('contacts', {
-    url: "/contacts",
-    templateUrl: "./src/templates/contacts.html",
-    controller: "contactsCtrl"
-  });
+
+  .state('breathe', {
+    url: "/breathe",
+    templateUrl: "./templates/breathe.html",
+    controller: "breatheCtrl"
+  })
+
+  .state('anapana', {
+    url: "/anapana",
+    templateUrl: "./templates/anapana.html",
+    controller: "anapanaCtrl"
+  })
+
+  .state('stream', {
+    url: "/stream",
+    templateUrl: "./templates/stream.html",
+    controller: "streamCtrl"
+  })
 
 })

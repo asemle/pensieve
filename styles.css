@@ -1,19 +1,8 @@
-body {
-  background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
-  background-size:100% auto;
-  background-repeat: no-repeat;
+nav {
+  height: 80px;
+  width: 100vh;
+  display: block;
 }
-
-
-
-
-#balloon {
-  position: fixed;
-  margin: 10% 38%;
-  opacity: 1;
-}
-
-
 
 .icon-journal {
   margin: 25px;
@@ -22,11 +11,41 @@ body {
   background-color: transparent;
   border-color: transparent;
   outline: 0;
-  position:fixed;
+  display: block;
 }
 
 
+.icon-home {
+  margin: 25px;
+  font-size: 45px;
+  color:white;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0;
+  display: block;
+}
 
+
+.ballonHolder {
+  margin-top: 20vh;
+  height: 80vh;
+  width: 100vh;
+  display: block;
+}
+
+#balloon {
+  margin: 18vh 38vw;
+  opacity: 1;
+
+}
+
+
+@media (min-width: 901px) {
+  body {
+    background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
+    background-size:100% auto;
+    background-repeat: no-repeat;
+  }
 
   .fadein {
     -webkit-opacity: 0;
@@ -44,9 +63,18 @@ body {
     -moz-opacity: 1;
     opacity: 1;
   }
-
+}
   @media (max-width: 900px) {
     .fadein {
       opacity: 1;
+    }
+
+    body {
+      background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
+      height: 100vh;
+      width: 100vh;
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-size:cover;
     }
 }

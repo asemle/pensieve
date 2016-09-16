@@ -2,18 +2,18 @@
 <html ng-app="pensieve">
   <head>
     <link href="https://file.myfontastic.com/cdELodtNFn69rQaFPuxa4e/icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./media/octa.ico"/>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
-    <title>pensieve</title>
+    <title img>pensieve</title>
   </head>
   <body ng-controller="penCtrl">
 
 
-<button class="icon-journal fadein" ui-sref="archive"></button>
 
 
-
-<img id="balloon" src="http://i.imgur.com/l5Lx7UW.gif" alt="breathe in breathe out" />
+<ui-view></ui-view>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
