@@ -12,27 +12,27 @@ angular.module('pensieve',["ui.router"])
 
   .state("archive", {
     url: "/archive",
-    templateUrl: "./templates/archive.html",
-    controller: "archiveCtrl"
+    templateUrl: "./templates/archive.html"
+    // controller: "archiveCtrl"
 
   })
 
   .state('breathe', {
     url: "/breathe",
-    templateUrl: "./templates/breathe.html",
-    controller: "breatheCtrl"
+    templateUrl: "./templates/breathe.html"
+    // controller: "breatheCtrl"
   })
 
   .state('anapana', {
     url: "/anapana",
-    templateUrl: "./templates/anapana.html",
-    controller: "anapanaCtrl"
+    templateUrl: "./templates/anapana.html"
+    // controller: "anapanaCtrl"
   })
 
   .state('stream', {
     url: "/stream",
-    templateUrl: "./templates/stream.html",
-    controller: "streamCtrl"
+    templateUrl: "./templates/stream.html"
+    // controller: "streamCtrl"
   })
 
 })

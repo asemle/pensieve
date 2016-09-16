@@ -1,29 +1,25 @@
-nav {
+body {
+  background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
+  height: 100vh;
+  width: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100vh auto;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding-top: 15px;
   height: 80px;
   width: 100vh;
   display: block;
-}
-
-.icon-journal {
-  margin: 25px;
-  font-size: 45px;
-  color:white;
-  background-color: transparent;
-  border-color: transparent;
-  outline: 0;
-  display: block;
+  position: relative;
 }
 
 
-.icon-home {
-  margin: 25px;
-  font-size: 45px;
-  color:white;
-  background-color: transparent;
-  border-color: transparent;
-  outline: 0;
-  display: block;
-}
 
 
 .ballonHolder {
@@ -51,30 +47,70 @@ nav {
     -webkit-opacity: 0;
     -moz-opacity: 0;
     opacity: 0;
-    -webkit-transition: all 5s ease;
-    -moz-transition: all 5s ease;
-    -ms-transition: all 5s ease;
-    -o-transition: all 5s ease;
-    transition: all 5s ease;
+    -webkit-transition: all 4s ease;
+    -moz-transition: all 4s ease;
+    -ms-transition: all 4s ease;
+    -o-transition: all 4s ease;
+    transition: all 4s ease;
   }
 
   .fadein:hover {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
+}
+    .icon-journal {
+      margin-top: 25px;
+      margin-left: 25px;
+      width: 53px;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: inline;
+    }
+
+
+    .icon-home {
+      margin: 25px;
+      width: 53px;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: inline;
+    }
   }
 }
   @media (max-width: 900px) {
+
     .fadein {
       opacity: 1;
     }
 
-    body {
-      background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
-      height: 100vh;
-      width: 100vh;
-      background-size: auto;
-      background-repeat: no-repeat;
-      background-size:cover;
+    .icon-journal {
+      margin: 25px;
+      width: 53px;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: block;
     }
+
+
+    .icon-home {
+      margin: 25px;
+      width: 53px !important;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: block;
+    }
+
 }
