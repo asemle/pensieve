@@ -6,7 +6,7 @@ angular.module('pensieve',["ui.router"])
   .state('home', {
     url: "/",
     templateUrl: "./templates/home.html",
-    controller: "penCtrl"
+    controller: "homeCtrl"
 
   })
 
@@ -19,14 +19,14 @@ angular.module('pensieve',["ui.router"])
 
   .state('breathe', {
     url: "/breathe",
-    templateUrl: "./templates/breathe.html"
-    // controller: "breatheCtrl"
+    templateUrl: "./templates/breathe.html",
+    controller: "breatheCtrl"
   })
 
   .state('anapana', {
     url: "/anapana",
-    templateUrl: "./templates/anapana.html"
-    // controller: "anapanaCtrl"
+    templateUrl: "./templates/anapana.html",
+    controller: "anapanaCtrl"
   })
 
   .state('stream', {
