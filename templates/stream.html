@@ -1,4 +1,16 @@
 <div class="navbar">
   <a class="icon-home fadein" ui-sref="home"></a>
-  <a class="icon-journal fadein" ui-sref="archive"></a>
+  <a class="icon-doc-text-inv fadein" ui-sref="archive"></a>
+</div>
+
+<div>
+  <h2 id="now..." ng-show="!textBox">Now...</h2>
+</div>
+
+<div class="streamBox" ng-show="textBox">
+
+<div>
+<textarea class="textStream" placeholder="Whats on your mind?"/></textarea>
+</div>
+
 </div>

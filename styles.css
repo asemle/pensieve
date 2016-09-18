@@ -104,8 +104,8 @@ a {
 }
   button {
     font-size: 30px bold;
-    border: 5px solid rgba(255, 255, 255, 0.5);;
-    background: rgba(255,255,255,0.1);
+    border: 3px solid rgba(255, 255, 255, 0.4);;
+    background: rgba(255,255,255,0.2);
     color: #10253C;
     border-radius: 40px;
     padding: 15px 0px;
@@ -242,6 +242,32 @@ h2 {
   }
 }
 
+.streamBox {
+  height: 2vh;
+  width: 3vh;
+  display: block;
+  margin: auto;
+  background-color: black;
+  -webkit-animation: textGrow 2s;
+  -moz-animation: textGrow 2s;
+  -o-animation: textGrow 2s;
+  animation: textGrow 2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes textGrow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.7;
+    height: 4vh;
+    width: 10vh;
+  }
+}
 
 
 @media (min-width: 901px) {
@@ -281,6 +307,17 @@ h2 {
 
     .icon-home {
       margin: 0 2vh 0 0;
+      width: 53px;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: inline;
+    }
+
+    .icon-doc-text-inv {
+      margin: 0 0 0 1vh;
       width: 53px;
       font-size: 45px;
       color:white;
@@ -329,4 +366,14 @@ h2 {
       display: block;
     }
 
+    .icon-doc-text-inv {
+      margin: 25px;
+      width: 53px !important;
+      font-size: 45px;
+      color:white;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      display: block;
+    }
 }
