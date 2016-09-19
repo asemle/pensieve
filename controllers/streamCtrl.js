@@ -53,6 +53,6 @@ localStorage.setItem(today, $scope.newEntry)
 console.log(localStorage.getItem(today))
 audioService.playGong();
 $scope.streamed = true;
-}, 10000)
+}, 25000)
 
 });
