@@ -1,18 +1,25 @@
 <div class="navbar">
   <a class="icon-home fadein" ui-sref="home"></a>
-  <a class="icon-doc-text-inv fadein" ui-sref="archive"></a>
+  <a class="icon-journal fadein" ui-sref="archive"></a>
+  <a class="icon-doc-text-inv fadein" ui-sref="stream"></a>
 </div>
 
 <div>
-  <h2 id="now..." ng-show="!textBox">Now...</h2>
+  <h2 id="now..." ng-show="!textBox">now...</h2>
 </div>
 
 <div class="streamBox" ng-show="textBox">
 <div class="msgBox">
-  <h3>{{selectedMsg}}</h3>
+  <h3 ng-class="{'h3Appear': selectedMsg}">{{selectedMsg}}</h3>
 </div>
 <div class="textStreamWrapper">
-<textarea onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}" ng-keypress="msgTimer()" class="textStream" placeholder="Whats on your mind?"></textarea>
+<textarea
+  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+  ng-keypress="msgTimer()"
+  class="textStream"
+  placeholder="Whats on your mind?"
+  ng-model="newEntry"
+  ></textarea>
 </div>
 
 </div>

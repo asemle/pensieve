@@ -8,16 +8,18 @@ angular.module('pensieve')
 
 var timer;
 var count = 0
-var encouragements = ['keep typing!',"type whatever comes to mind", 'this is private - for your eyes only', 'keep typing, no matter what'];
+var encouragements = ['just keep typing!',"whatever comes to mind...", 'anything at all.', 'go on...', 'get it all out'];
+
 $scope.msgTimer = function() {
   if(timer) {
-  clearTimeout(timer);
-  $scope.selectedMsg = undefined;
+  $timeout.cancel(timer);
+ $scope.selectedMsg = undefined;
 }
-  timer = setTimeout(function () {
-    $scope.selectedMsg = encouragements[count];
-    console.log($scope.selectedMsg)
-    if(count === encouragements.length) {
+  timer = $timeout(function () {
+
+  $scope.selectedMsg = encouragements[count];
+  console.log($scope.selectedMsg)
+    if(count === encouragements.length - 1) {
       count = 0
     }
     else {
@@ -25,7 +27,7 @@ $scope.msgTimer = function() {
     }
   }, 3000);
 }
-console.log($scope.selectedMsg);
+
 
 var displayEncouragement = function() {
   for(var i = 0; i < $scope.encouragments.length; i++) {
