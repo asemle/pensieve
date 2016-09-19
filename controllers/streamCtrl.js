@@ -1,5 +1,5 @@
 angular.module('pensieve')
-.controller('streamCtrl', function($scope, $state, $timeout,audioService,journalService) {
+.controller('streamCtrl', function($scope, $state, $timeout,audioService) {
   audioService.stopCrickets();
   $scope.textBox = false;
   $timeout(function () {
@@ -8,7 +8,7 @@ angular.module('pensieve')
 
 var timer;
 var count = 0
-var encouragements = ['just keep typing!',"whatever comes to mind...", 'anything at all.', 'go on...', 'get it all out'];
+var encouragements = ['just keep typing',"whatever comes to mind", 'anything at all', 'go on...', 'get it all out'];
 
 $scope.msgTimer = function() {
   if(timer) {
@@ -35,6 +35,8 @@ $timeout( function() {
   var dd = today.getDate();
   var mm = today.getMonth()+1; //January is 0!
   var yyyy = today.getFullYear();
+  var ssss = today.getSeconds();
+
 
   if(dd<10) {
       dd='0'+dd
@@ -44,11 +46,13 @@ $timeout( function() {
       mm='0'+mm
   }
 
-  today = mm+'/'+dd+'/'+yyyy;
 
-journalService.writeEntry({'date': today, 'text':$scope.newEntry})
-console.log(journalService.getJournal())
+  today = mm+'/'+dd+'/'+yyyy+ ' ' + ssss
+
+localStorage.setItem(today, $scope.newEntry)
+console.log(localStorage.getItem(today))
 audioService.playGong();
+$scope.streamed = true;
 }, 10000)
 
 });

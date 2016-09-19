@@ -4,7 +4,7 @@
 </div>
 
 <div class="journalBox">
-<div class="entryBox" ng-repeat="record in records">
-  <div class="recordText"><span class="recordDate">{{record.date}}</span>{{record.text}}</div>
+<div class="entryBox" ng-repeat="(key, value) in journal">
+  <div class="recordText"><span class="recordDate">{{key}}</br></span>{{value}}</div>
 </div>
 </div>

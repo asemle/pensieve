@@ -373,40 +373,41 @@ vertical-align: middle;
 }
 
 .journalBox {
+  height: 508px  ;
   margin: auto;
   padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+
 }
 
 .entryBox {
   font-family: 'Roboto', sans-serif;
-  margin: 0 10% 10% 0;
-  display: inline;
-  position: fixed;
+  margin: 0 20px 20px 20px;
+  flex: auto;
 }
 
 .recordDate {
   font-size: 20px;
   color:white;
-  align-self: center;
+
 }
 
 .recordText {
   margin: auto;
+  padding:2px;
   background-color: rgba(0,0,0,0.5);
   width: 15vw;
   height: 15vw;
   color: rgba(255,255,255,0.5);
   border: 1px solid #ccc;
   border-radius: 5px;
-  overflow: scroll;
-  transition-duration: 2s;
+  overflow-y: scroll;
 
 }
 
-.recordText:hover {
-  height: 30vw;
-  width: 30%;
-}
 
 
 @media (min-width: 901px) {

@@ -1,5 +1,6 @@
 angular.module('pensieve')
-.controller('archiveCtrl', function ($scope, $state, audioService, journalService) {
+.controller('archiveCtrl', function ($scope, $state, audioService) {
 audioService.playCrickets();
-  $scope.records = journalService.getJournal();
+  $scope.journal = localStorage;
+  console.log(localStorage);
 })
