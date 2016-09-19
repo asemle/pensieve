@@ -1,11 +1,10 @@
 body {
   background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
-  height: auto;
+  height: 100vh;
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-
 }
 
 @font-face {
@@ -80,10 +79,10 @@ a {
 .startButtonBox {
   opacity: 0;
   height: 60px;
-  width: 120px;
+  width: 300px;
   display: block;
   text-align: center;
-  margin: -30px auto 0 auto;
+  margin: -80px auto 0 auto;
   -webkit-animation: buttonAppear 3s;
   -moz-animation: buttonAppear 3s;
   -o-animation: buttonAppear 3s;
@@ -102,21 +101,42 @@ a {
     opacity: 0.8;
   }
 }
-  button {
-    font-size: 30px bold;
-    border: 3px solid rgba(255, 255, 255, 0.4);;
-    background: rgba(255,255,255,0.2);
-    color: #10253C;
+  #startButton {
+
+    font-size: 15px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.2);;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0);
     border-radius: 40px;
     padding: 15px 0px;
-    width: 120px;
+    width: 60px;
     outline: none;
+    white-space: nowrap;
+    overflow: hidden;
     }
+
+#startButton:hover {
+  -webkit-animation: buttonExpand 1s;
+  -moz-animation: buttonExpand 1s;
+  -o-animation: buttonExpand 1s;
+  animation: buttonExpand 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes buttonExpand {
+  100% {
+    width: 240px;
+    color: rgba(255,255,255,1);
+  }
+}
 
 
 
 .icon-certificate {
-
+  font: 10px white;
 }
 
 
@@ -350,6 +370,42 @@ vertical-align: middle;
     color: white;
     overflow:scroll;
   }
+}
+
+.journalBox {
+  margin: auto;
+  padding: 5%;
+}
+
+.entryBox {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 10% 10% 0;
+  display: inline;
+  position: fixed;
+}
+
+.recordDate {
+  font-size: 20px;
+  color:white;
+  align-self: center;
+}
+
+.recordText {
+  margin: auto;
+  background-color: rgba(0,0,0,0.5);
+  width: 15vw;
+  height: 15vw;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: scroll;
+  transition-duration: 2s;
+
+}
+
+.recordText:hover {
+  height: 30vw;
+  width: 30%;
 }
 
 

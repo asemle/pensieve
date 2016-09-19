@@ -1,8 +1,10 @@
 angular.module('pensieve')
 .service("journalService", function() {
+  this.journal = [];
   this.getJournal = function() {
-    return journal;
+    return this.journal;
+  }
+  this.writeEntry = function(entry) {
+    this.journal.push(entry)
   }
 });
-
-var journal = [];

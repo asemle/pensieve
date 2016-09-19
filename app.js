@@ -12,8 +12,8 @@ angular.module('pensieve',["ui.router"])
 
   .state("archive", {
     url: "/archive",
-    templateUrl: "./templates/archive.html"
-    // controller: "archiveCtrl"
+    templateUrl: "./templates/archive.html",
+    controller: "archiveCtrl"
 
   })
 

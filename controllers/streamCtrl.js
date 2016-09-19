@@ -1,5 +1,5 @@
 angular.module('pensieve')
-.controller('streamCtrl', function($scope, $state, $timeout,audioService) {
+.controller('streamCtrl', function($scope, $state, $timeout,audioService,journalService) {
   audioService.stopCrickets();
   $scope.textBox = false;
   $timeout(function () {
@@ -18,6 +18,7 @@ $scope.msgTimer = function() {
   timer = $timeout(function () {
 
   $scope.selectedMsg = encouragements[count];
+
   console.log($scope.selectedMsg)
     if(count === encouragements.length - 1) {
       count = 0
@@ -27,13 +28,27 @@ $scope.msgTimer = function() {
     }
   }, 3000);
 }
+  $scope.journal = []
 
+$timeout( function() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
 
-var displayEncouragement = function() {
-  for(var i = 0; i < $scope.encouragments.length; i++) {
-    return $scope.encouragements[i];
+  if(dd<10) {
+      dd='0'+dd
   }
-}
 
+  if(mm<10) {
+      mm='0'+mm
+  }
 
-})
+  today = mm+'/'+dd+'/'+yyyy;
+
+journalService.writeEntry({'date': today, 'text':$scope.newEntry})
+console.log(journalService.getJournal())
+audioService.playGong();
+}, 10000)
+
+});
