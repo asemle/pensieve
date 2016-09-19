@@ -31,8 +31,8 @@ angular.module('pensieve',["ui.router"])
 
   .state('stream', {
     url: "/stream",
-    templateUrl: "./templates/stream.html"
-    // controller: "streamCtrl"
+    templateUrl: "./templates/stream.html",
+    controller: "streamCtrl"
   })
 
 })
