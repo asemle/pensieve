@@ -30,8 +30,24 @@ a {
   height: 10vh;
   width: 100vw;
   display: block;
+
 }
 
+.navbar:hover {
+  -webkit-animation: navbarAppear 3s;
+  -moz-animation:    navbarAppear 3s;
+  -o-animation: navbarAppear 3s;
+  animation: navbarAppear 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal;
+
+}
+
+@keyframes navbarAppear {
+  100% {background-color:rgba(255, 255, 255, 0.05)
+  }
+}
 .titleScreen {
   height: 80vh;
   text-align: center;
