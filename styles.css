@@ -1,7 +1,96 @@
+@media (max-width: 900px) {
+  h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin-top: 25vh;
+    opacity: 0
+    -webkit-animation: h2Appear 4s;
+    -moz-animation: h2Appear 4s;
+    -o-animation: h2Appear 4s;
+    animation: h2Appear 4s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-direction: normal;
+
+  }
+  body {
+    background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    /*background-size: 100vh auto;*/
+  }
+
+  #startButton {
+    font-size: 15px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.2);;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+    border-radius: 40px;
+    padding: 15px 0px;
+    width: 240px;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    }
+
+
+.navbar {
+  padding-top: 7vh;
+}
+
+
+  .icon-journal {
+    margin:2vh;
+    width: 35px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    display: inline;
+    opacity: 1;
+  }
+
+
+  .icon-home {
+    margin:2vh;
+    width:35px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    display: inline;
+    opacity: 1;
+  }
+
+  .icon-doc-text-inv {
+    margin:2vh;
+    width: 35px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    display: inline;
+    opacity: 1;
+  }
+  .streamBox {
+    text-align: center;
+    height: 60vh;
+    padding-top: 30vh;
+  }
+}
+
 body {
   background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
   height: 100vh;
-  width: auto;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -24,14 +113,6 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  margin: 2vh;
-  padding: 2vh;
-  height: 10vh;
-  width: 100vw;
-  display: block;
-
-}
 
 .navbar:hover {
   -webkit-animation: navbarAppear 3s;
@@ -44,10 +125,39 @@ a {
 
 }
 
+.navbar {
+  margin-bottom: 2vh;
+  padding: 1vh;
+  height: 10vh;
+  width: 100vw;
+  display: block;
+  webkit-animation: hoverout 3s;
+  -moz-animation:    hoverout 3s;
+  -o-animation: hoverout 3s;
+  animation: hoverout 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+
 @keyframes navbarAppear {
-  100% {background-color:rgba(255, 255, 255, 0.05)
+  100% {background-color:rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255,255,255, 0.1);
   }
 }
+
+@keyframes hoverout {
+  0% {
+    background-color:rgba(255, 255, 255, 0.05);
+          border-bottom: 1px solid rgba(255,255,255, 0.1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+      border-bottom: 1px solid rgba(255,255,255, 0);
+  }
+}
+
 .titleScreen {
   height: 80vh;
   text-align: center;
@@ -117,7 +227,7 @@ a {
     opacity: 0.8;
   }
 }
-  #startButton {
+  /*#startButton {
 
     font-size: 15px;
     height: 60px;
@@ -130,24 +240,8 @@ a {
     outline: none;
     white-space: nowrap;
     overflow: hidden;
-    }
+    }*/
 
-#startButton:hover {
-  -webkit-animation: buttonExpand 1s;
-  -moz-animation: buttonExpand 1s;
-  -o-animation: buttonExpand 1s;
-  animation: buttonExpand 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-
-@keyframes buttonExpand {
-  100% {
-    width: 240px;
-    color: rgba(255,255,255,1);
-  }
-}
 
 
 
@@ -182,7 +276,7 @@ a {
 
 
 
-h2 {
+/*h2 {
   font-size: 40px;
   color: white;
   text-align: center;
@@ -198,7 +292,7 @@ h2 {
   -webkit-animation-fill-mode: forwards;
   animation-direction: normal;
 
-}
+}*/
 
 @keyframes h2Appear {
   0% {
@@ -277,11 +371,7 @@ h2 {
     opacity: 0.8;
   }
 }
-.streamBox {
-  text-align: center;
-  height: 60vh;
-  padding-top: 20vh;
-}
+
 
 .msgBox {
   height: 10%;
@@ -315,78 +405,7 @@ h2 {
 
 
 }
-.textStreamWrapper {
-  margin-top: 2%;
-}
 
-.textStream {
-  width: 0%;
-  background-color: black;
-  opacity: 0;
-  font-size: 0px;
-vertical-align: middle;
-		height: 0em;
-		padding: 3px;
-		border: 1px solid #ccc;
-		border-radius: 3px;
-    margin: auto;
-    display: inline-block;
-		box-sizing: border-box;
-    -webkit-animation: textGrow 2s;
-    -moz-animation: textGrow 2s;
-    -o-animation: textGrow 2s;
-    animation: textGrow 2s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-direction: normal;
-    overflow:hidden;
-
-}
-
-
-@keyframes textGrow {
-  90% {
-    font: white transparent;
-  }
-  100% {
-    font-size: 1rem;
-    opacity: 0.5;
-    height: 1.7em;
-  width: 18%;
-    color: white;
-  }
-}
-
-.textStream:focus {
-  width: 20%;
-  height: 2em;
-  background-color: black;
-  opacity: 0.5;
-  font-size: 20px;
-  color: white;
-  vertical-align: middle;
-	padding: 5px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-  margin: auto;
-  display: block;
-  -webkit-animation: growLarger 2s;
-  -moz-animation: growLarger 2s;
-  -o-animation: growLarger 2s;
-  animation: growLarger 2s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-
-@keyframes growLarger {
-  100% {
-    height: 35vh;
-    width: 60%;
-    color: white;
-    overflow:scroll;
-  }
-}
 
 .journalBox {
   height: 508px  ;
@@ -432,23 +451,24 @@ vertical-align: middle;
     background-size:100% auto;
     background-repeat: no-repeat;
   }
+  h2 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin-top: 25vh;
+    opacity: 0
+    -webkit-animation: h2Appear 4s;
+    -moz-animation: h2Appear 4s;
+    -o-animation: h2Appear 4s;
+    animation: h2Appear 4s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-direction: normal;
 
-  .fadein {
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -ms-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    transition: all 3s ease;
   }
 
-  .fadein:hover {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-}
     .icon-journal {
       margin: 0 2vh 0 0;
       width: 53px;
@@ -459,7 +479,16 @@ vertical-align: middle;
       outline: 0;
       display: inline;
       vertical-align: middle;
+      opacity: 0;
+      webkit-animation: fadeout 3s;
+      -moz-animation:   fadeout 3s;
+      -o-animation: fadeout 3s;
+      animation: fadeout 3s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-direction: normal;
     }
+
 
 
     .icon-home {
@@ -472,7 +501,16 @@ vertical-align: middle;
       outline: 0;
       display: inline;
       vertical-align: middle;
-    }
+        opacity: 0;
+        webkit-animation: fadeout 3s;
+        -moz-animation:   fadeout 3s;
+        -o-animation: fadeout 3s;
+        animation: fadeout 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-direction: normal;
+      }
+
 
     .icon-doc-text-inv {
       margin: 0 0 0 1vh;
@@ -484,55 +522,185 @@ vertical-align: middle;
       outline: 0;
       display: inline;
       vertical-align: middle;
+      opacity: 0;
+      webkit-animation: fadeout 3s;
+      -moz-animation:   fadeout 3s;
+      -o-animation: fadeout 3s;
+      animation: fadeout 3s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-direction: normal;
     }
+
+    @keyframes fadeout {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    /*.fadein {
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+      opacity: 0;
+      -webkit-transition: all 3s ease;
+      -moz-transition: all 3s ease;
+      -ms-transition: all 3s ease;
+      -o-transition: all 3s ease;
+      transition: all 3s ease;
+    }*/
+
+    .icon-journal:hover {
+      webkit-animation: fadein 3s;
+      -moz-animation:   fadein 3s;
+      -o-animation: fadein 3s;
+      animation: fadein 3s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-direction: normal;
   }
+  .icon-doc-text-inv:hover {
+    webkit-animation: fadein 3s;
+    -moz-animation:   fadein 3s;
+    -o-animation: fadein 3s;
+    animation: fadein 3s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-direction: normal;
 }
-  @media (max-width: 900px) {
-
-    body {
-      background-image: url('https://static.pexels.com/photos/7477/night-trees-stars.jpg');
-      height: 100vh;
-      width: 100vh;
-      background-repeat: no-repeat;
-      background-size: 100vh auto;
-
+.icon-home:hover {
+  webkit-animation: fadein 3s;
+  -moz-animation:   fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+  @keyframes fadein {
+    0% {
+      opacity: 0;
     }
-
-    .fadein {
+    100% {
       opacity: 1;
     }
+  }
+  #startButton {
 
-    .icon-journal {
-      margin: 25px;
-      width: 53px;
-      font-size: 45px;
-      color:white;
-      background-color: transparent;
-      border-color: transparent;
-      outline: 0;
-      display: block;
+    font-size: 15px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.2);;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0);
+    border-radius: 40px;
+    padding: 15px 0px;
+    width: 60px;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
     }
 
 
-    .icon-home {
-      margin: 25px;
-      width: 53px !important;
-      font-size: 45px;
-      color:white;
-      background-color: transparent;
-      border-color: transparent;
-      outline: 0;
-      display: block;
-    }
+  #startButton:hover {
+    -webkit-animation: buttonExpand 1s;
+    -moz-animation: buttonExpand 1s;
+    -o-animation: buttonExpand 1s;
+    animation: buttonExpand 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-direction: normal;
+  }
 
-    .icon-doc-text-inv {
-      margin: 25px;
-      width: 53px !important;
-      font-size: 45px;
-      color:white;
-      background-color: transparent;
-      border-color: transparent;
-      outline: 0;
-      display: block;
+  @keyframes buttonExpand {
+    100% {
+      width: 240px;
+      color: rgba(255,255,255,1);
     }
+  }
+  .streamBox {
+    text-align: center;
+    height: 60vh;
+    padding-top: 20vh;
+  }
+  .textStreamWrapper {
+    margin-top: 2%;
+  }
+
+  .textStream {
+    width: 0%;
+    background-color: black;
+    opacity: 0;
+    font-size: 0px;
+    vertical-align: middle;
+  		height: 0em;
+  		padding: 3px;
+  		border: 1px solid #ccc;
+  		border-radius: 3px;
+      margin: auto;
+      overflow:hidden;
+      display: inline-block;
+  		box-sizing: border-box;
+      -webkit-animation: textGrow 2s;
+      -moz-animation: textGrow 2s;
+      -o-animation: textGrow 2s;
+      animation: textGrow 2s;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-direction: normal;
+
+
+  }
+
+
+  @keyframes textGrow {
+    0% {
+      border: 2px solid #ccc;
+    }
+    90% {
+      font: white transparent;
+      border: 2px solid #ccc;
+    }
+    100% {
+      font-size: 1rem;
+      opacity: 0.5;
+      height: 2em;
+    width: 22%;
+      color: white;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .textStream:focus {
+    width: 22%;
+    height: 2em;
+    background-color: black;
+    opacity: 0.5;
+    font-size: 1rem;
+    color: white;
+    vertical-align: middle;
+  	padding: 5px;
+  	border: 1px solid #ccc;
+  	border-radius: 3px;
+    margin: auto;
+    display: block;
+    -webkit-animation: growLarger 2s;
+    -moz-animation: growLarger 2s;
+    -o-animation: growLarger 2s;
+    animation: growLarger 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-direction: normal;
+  }
+
+  @keyframes growLarger {
+    100% {
+      height: 35vh;
+      width: 60%;
+      color: white;
+      overflow:scroll;
+      font-size: 20px;
+    }
+  }
+  }
 }
