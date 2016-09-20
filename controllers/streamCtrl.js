@@ -8,7 +8,7 @@ angular.module('pensieve')
 
 var timer;
 var count = 0
-var encouragements = ['just keep typing',"whatever comes to mind", 'anything at all', 'go on...', 'get it all out'];
+var encouragements = ['just keep typing',"whatever comes to mind", 'anything at all', 'don\'t worry about mistakes', 'keep going..'];
 
 $scope.msgTimer = function() {
   if(timer) {
@@ -54,5 +54,5 @@ console.log(localStorage.getItem(today))
 audioService.playGong();
 $scope.streamed = true;
 }, 300000)
-
+// localStorage.clear();
 });
