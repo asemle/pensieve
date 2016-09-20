@@ -799,4 +799,16 @@ a {
   .penTitle {
     font-size: 60px;
   }
+  .msg {
+    font-size: 20px
+  }
+  #penultimateMsg {
+    font-size: 25px;
+    opacity: 1;
+  }
+  #lastMsg {
+    font-size: 28px;
+    opacity: 1;
+  }
+
 }
