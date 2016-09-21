@@ -3,4 +3,7 @@ angular.module('pensieve')
 audioService.playCrickets();
   $scope.journal = localStorage;
   console.log(localStorage);
+  $scope.clearEntry = function(index) {
+    localStorage.removeItem(index)
+  }
 })

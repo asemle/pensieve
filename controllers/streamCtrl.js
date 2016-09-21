@@ -1,6 +1,7 @@
 angular.module('pensieve')
 .controller('streamCtrl', function($scope, $state, $timeout,audioService) {
   audioService.stopCrickets();
+  audioService.playGong();
   $scope.textBox = false;
   $timeout(function () {
     $scope.textBox = true;
@@ -53,6 +54,8 @@ localStorage.setItem(today, $scope.newEntry)
 console.log(localStorage.getItem(today))
 audioService.playGong();
 $scope.streamed = true;
-}, 300000)
-// localStorage.clear();
+$timeout.cancel(timer);
+$scope.selectedMsg = "Your thoughts have been saved on your machine. Click on the journal icon above to see them. Come back soon."
+}, 10000)
+
 });

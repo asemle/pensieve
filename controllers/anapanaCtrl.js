@@ -35,7 +35,6 @@ $timeout(function () {
   }, 240000);
 $timeout(function() {
     $scope.showMsg6 = false;
-    audioService.playGong();
     audioService.stopCrickets();
     $state.go('stream')
   }, 300000);

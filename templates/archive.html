@@ -6,5 +6,6 @@
 <div class="journalBox">
 <div class="entryBox" ng-repeat="(key, value) in journal">
   <div class="recordText"><span class="recordDate">{{key}}</br></span>{{value}}</div>
+  <button ng-click="clearEntry(key)">Delete</button>
 </div>
 </div>
