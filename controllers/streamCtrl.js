@@ -56,6 +56,6 @@ audioService.playGong();
 $scope.streamed = true;
 $timeout.cancel(timer);
 $scope.selectedMsg = "Your thoughts have been saved on your machine. Click on the journal icon above to see them. Come back soon."
-}, 10000)
+}, 300000)
 
 });
