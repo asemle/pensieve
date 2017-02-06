@@ -393,6 +393,19 @@ a {
     opacity: 0;
   }
 }
+.breathePage {
+  height: 100%;
+}
+#balloonHolder {
+  position: absolute;
+  /*top: -50px;*/
+  transition: opacity 2s;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  opacity: 0;
+}
 
 .msg {
   font-size: 40px;

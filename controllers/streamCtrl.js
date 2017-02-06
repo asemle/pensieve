@@ -9,7 +9,7 @@ angular.module('pensieve')
 
 var timer;
 var count = 0
-var encouragements = ['just keep typing',"whatever comes to mind", 'anything at all', 'don\'t worry about mistakes', 'keep going..'];
+var encouragements = ['give yourself a few minutes to say whatever is on your mind', 'just keep typing',"whatever comes to mind", 'anything at all', 'don\'t worry about mistakes', 'keep going..'];
 
 $scope.msgTimer = function() {
   if(timer) {

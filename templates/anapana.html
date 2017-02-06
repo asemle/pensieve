@@ -4,16 +4,18 @@
   <a class="icon-doc-text-inv fadein" ui-sref="stream"></a>
 </div>
 
-<div class="breathePage">
-<div class="balloonHolder">
+</div>
 
+<div class="breathePage" ng-mouseMove="balloon($event)">
+<div id="balloonHolder">
+    try to be still for a few minutes
 </div>
 <br>
 <div >
   <h2 class="msg" ng-show="showMsg1">feel the breathe under your nose...</h2>
   <h2 class="msg" ng-show="showMsg2">just the sensation as air goes in...</h2>
   <h2 class="msg" ng-show="showMsg3">...and goes out.</h2>
-  <h2 class="msg" ng-show="showMsg4">Now close your eyes and focus only on this sensation.</h2>
+  <h2 class="msg" ng-show="showMsg4">Now close your eyes and focus only on this sensation. <br> In a few minutes a gong will ring.</h2>
   <h2 class="msg" id="penultimateMsg" ng-show="showMsg5">your mind will wander...</h2>
   <h2 class="msg" id="lastMsg" ng-show="showMsg6">just return to your breathe.</h2>
 </div>
